@@ -1,20 +1,42 @@
 {
   "manifest_version": 2,
   "name": "Nutrition Facts Label",
-  "icons": { "16": "assets/images/icon16.png",
+  "description": "Nutrition fact label generator chrome extension",
+  "icons": {
+    "16": "assets/images/icon16.png",
     "48": "assets/images/icon48.png",
     "128": "assets/images/icon128.png"
   },
+  "minimum_chrome_version": "5.0",
   "version": "0.1",
+  "permissions": [
+    "tabs",
+    "*://*/*",
+    "contextMenus"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": "assets/images/icon48.png",
+    "default_title": "Nutrition Facts Label",
+    "default_popup": "background.html"
+  },
+  "web_accessible_resources": [
+    "assets/css/nutritionLabel.css",
+    "assets/javascript/jquery-2.1.4.min.js",
+    "assets/javascript/nutritionLabel.js",
+    "nutrition-facts-label.js"
+  ],
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": ["assets/javascript/jquery-2.1.4.min.js","nutrition-facts-label.js"]
+      "matches": ["*://*/*"],
+      "js": [
+        "assets/javascript/jquery-2.1.4.min.js",
+        "assets/javascript/nutritionLabel.js",
+        "nutrition-facts-label.js"
+      ]
     }
-  ],
-  "browser_action": {
-    "default_icon": "assets/images/icon48.png"
-  }
+  ]
 }
