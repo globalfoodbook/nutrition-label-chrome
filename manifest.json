@@ -2,8 +2,19 @@
   "manifest_version": 2,
   "name": "Nutrition Facts Label",
   "icons": { "16": "assets/images/icon16.png",
-           "48": "assets/images/icon48.png",
-          "128": "assets/images/icon128.png"
-          },
-  "version": "0.1"
+    "48": "assets/images/icon48.png",
+    "128": "assets/images/icon128.png"
+  },
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["assets/javascript/jquery-2.1.4.min.js","nutrition-facts-label.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "assets/images/icon48.png"
+  }
 }
