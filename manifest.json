@@ -24,6 +24,14 @@
     "default_popup": "background.html"
   },
   "web_accessible_resources": [
+    "assets/images/icon1128.png",
+    "assets/images/icon16.png",
+    "assets/images/icon48.png",
+    "assets/images/load.gif",
+    "assets/images/logo.png",
+    "assets/images/beta.png",
+    "assets/css/images/down.png",
+    "assets/css/images/up.png",
     "assets/css/nutritionLabel.css",
     "assets/javascript/jquery-2.1.4.min.js",
     "assets/javascript/nutritionLabel.js",
@@ -35,6 +43,8 @@
       "js": [
         "assets/javascript/jquery-2.1.4.min.js",
         "assets/javascript/nutritionLabel.js",
+        "assets/javascript/html2canvas.js",
+        "assets/javascript/gfb_nutrition_label.js",
         "nutrition-facts-label.js"
       ]
     }

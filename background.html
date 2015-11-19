@@ -5,11 +5,35 @@
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/nutritionLabel.css'>
     <script type="text/javascript" src="assets/javascript/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="assets/javascript/nutritionLabel.js"></script>
+    <script type="text/javascript" src="assets/javascript/html2canvas.js"></script>
+    <script type="text/javascript" src="assets/javascript/gfb_nutrition_label.js"></script>
     <script type="text/javascript" src="nutrition-facts-label.js"></script>
+    <style media="screen">
+      #nutrition-label-outer {
+        background-color: white;
+        width: auto !important;
+      }
+      .gfb-nutrition-label-section .section1, .gfb-nutrition-label-section .section2 {
+        vertical-align: top;
+        display: inline-block !important;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
-    <div id="nutrition-label-outer">
-      <div id="nutrition-label"> </div>
+    <img id="gfb-nutrition-label-loader" src="/assets/images/load.gif" style="display:none"/>
+    <div class="gfb-nutrition-label-section">
+      <div class='section1'>
+        <h4>Ingredients:</h4>
+        <textarea id="gfb-nutrition-label-textarea" name='ingredients' rows='12' cols='33'></textarea>
+        <p><input id="gfb-nutrition-label-button" type='button' name='Submit' value='Generate Label' style="display: block; width: 140px; background: #4E9CAF; padding: 10px; text-align: center; border-color:transparent; border-radius: 5px; color: white; font-size:13.5px; font-weight: bold; cursor: pointer;"/></p>
+      </div>
+      <div class='section2'>
+        <div id="nutrition-label-outer">
+          <div id="nutrition-label"> </div>
+        </div>
+        <p><a id="gfb-nutrition-label-download" style="display:inline; width: 70px; background: #4E9CAF; padding: 10px; text-align: center; border-radius: 5px; color: white; font-weight: bold; cursor: pointer;">Download</a></p>
+      </div>
     </div>
   </body>
 </html>
