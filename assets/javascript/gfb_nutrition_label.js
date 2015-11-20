@@ -1,7 +1,7 @@
 var GFBNutritionLabel = function(){};
 
 GFBNutritionLabel.prototype.generateImage = function(){
-  var node = [document.getElementById('nutrition-label')],
+  var node = [document.getElementById('gfb-nutrition-label-chrome')],
   servingSizeField = document.getElementById("n-label-servingsizefield")
 
   servingSizeField.style.display = "none";
@@ -58,7 +58,7 @@ GFBNutritionLabel.prototype.get = function(ingredients){
               "ingredientList": ingredients
             };
           response = JSON.parse(xmlhttp.responseText);
-          $('#nutrition-label').nutritionLabel($.extend(settings, response));
+          $('#gfb-nutrition-label-chrome').nutritionLabel($.extend(settings, response));
         } catch(error) {
           _this.notify(errorMsg + "\n" + error);
         }

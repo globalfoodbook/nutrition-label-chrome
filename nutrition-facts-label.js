@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('#nutrition-label').nutritionLabel({"itemName": ""});
+  $('#gfb-nutrition-label-chrome').nutritionLabel({"itemName": ""});
   $('#gfb-nutrition-label-button').on('click', function(){
     gfbnutritionlabel.submitForm();
   });
