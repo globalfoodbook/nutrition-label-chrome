@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html style="min-width:600px;">
   <head>
     <title>Nutrition Facts Label</title>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/nutritionLabel.css'>
@@ -13,10 +13,14 @@
         background-color: white;
         width: auto !important;
       }
+      .gfb-nutrition-label-section .section2 {
+        padding-left: 20px;
+      }
       .gfb-nutrition-label-section .section1, .gfb-nutrition-label-section .section2 {
         vertical-align: top;
         display: inline-block !important;
         overflow: hidden;
+        padding-left: 12px;
       }
     </style>
   </head>
@@ -29,10 +33,11 @@
         <p><input id="gfb-nutrition-label-button" type='button' name='Submit' value='Generate Label' style="display: block; width: 140px; background: #4E9CAF; padding: 10px; text-align: center; border-color:transparent; border-radius: 5px; color: white; font-size:13.5px; font-weight: bold; cursor: pointer;"/></p>
       </div>
       <div class='section2'>
+        <h4>Nutrition Label:</h4>
         <div id="nutrition-label-outer">
           <div id="nutrition-label"> </div>
         </div>
-        <p><a id="gfb-nutrition-label-download" style="display:inline; width: 70px; background: #4E9CAF; padding: 10px; text-align: center; border-radius: 5px; color: white; font-weight: bold; cursor: pointer;">Download</a></p>
+        <p><a id="gfb-nutrition-label-download" style="display:inline; width: 70px; background: #4E9CAF; padding: 10px; margin-top:10px; text-align: center; border-radius: 5px; color: white; font-weight: bold; cursor: pointer;">Download</a></p>
       </div>
     </div>
   </body>
