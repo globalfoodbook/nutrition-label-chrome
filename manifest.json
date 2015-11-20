@@ -10,9 +10,6 @@
   "minimum_chrome_version": "5.0",
   "version": "0.1",
   "permissions": [
-    "tabs",
-    "*://*/*",
-    "contextMenus",
     "http://nuts.globalfoodbook.net/*"
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
