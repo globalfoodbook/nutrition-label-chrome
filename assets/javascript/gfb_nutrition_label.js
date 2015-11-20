@@ -15,8 +15,6 @@ GFBNutritionLabel.prototype.generateImage = function(){
       context.imageSmoothingEnabled = false;
       context.oImageSmoothingEnabled = false;
 			var image = canvas.toDataURL("image/jpeg");
-			// console.log("Image: ", image);
-			// window.location.href=image;
 			var anchor = document.createElement('a');
 	    anchor.setAttribute('download', 'nutrition-label.jpg');
 	    anchor.setAttribute('href', image);
@@ -30,6 +28,7 @@ GFBNutritionLabel.prototype.get = function(ingredients){
   path = url+"?ingredients="+ingredients,
   loader = document.getElementById("gfb-nutrition-label-loader"),
   errorMsg = "An error has occured. Please verify that you ingredient(s) are correctly entered line by line.",
+  _this = this,
   xmlhttp,
   response
 
@@ -56,15 +55,15 @@ GFBNutritionLabel.prototype.get = function(ingredients){
           response = JSON.parse(xmlhttp.responseText);
           $('#nutrition-label').nutritionLabel($.extend(settings, response));
         } catch(error) {
-          alert(errorMsg + "\n" + error);
+          _this.notify(errorMsg + "\n" + error);
         }
       } else {
-        alert(errorMsg);
+        _this.notify(errorMsg);
       }
       loader.style.display = "none";
     }
    }
-  //  console.log("url: ", path);
+   
   xmlhttp.open("GET",path,true);
   xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
   xmlhttp.send();
@@ -75,10 +74,10 @@ GFBNutritionLabel.prototype.submitForm = function() {
   ingredients
 
   if (contentOfTextArea.length <= 1) {
-    alert("Please add your ingredients before submitting this form.")
+    this.notify("Please add your ingredients before submitting this form.")
     return false;
   } else if (contentOfTextArea.indexOf('!') > -1) {
-    alert("Please remove exclammation mark (!) from your ingredients listing.")
+    this.notify("Please remove exclammation mark (!) from your ingredients listing.")
     return false;
   } else {
     ingredients = contentOfTextArea.split("\n").join(",").trim();
@@ -86,4 +85,9 @@ GFBNutritionLabel.prototype.submitForm = function() {
     // document.forms['gfb-nutrition-label-form'].submit();
   }
 }
+
+GFBNutritionLabel.prototype.notify = function(message) {
+  jQuery('#gfb-nutrition-label-notify').show().html(message).delay(10000).fadeOut('slow');
+}
+
 gfbnutritionlabel = new GFBNutritionLabel();
