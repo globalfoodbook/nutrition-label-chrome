@@ -1,7 +1,11 @@
 var GFBNutritionLabel = function(){};
 
 GFBNutritionLabel.prototype.generateImage = function(){
-  var node = [document.getElementById('nutrition-label')];
+  var node = [document.getElementById('nutrition-label')],
+  servingSizeField = document.getElementById("n-label-servingsizefield")
+
+  servingSizeField.style.display = "none";
+
   html2canvas(node, {
     // logging: true,
     useCORS: true,
@@ -21,6 +25,7 @@ GFBNutritionLabel.prototype.generateImage = function(){
 	    anchor.click();
     }
   });
+  servingSizeField.style.display = "inline";
 }
 
 GFBNutritionLabel.prototype.get = function(ingredients){
