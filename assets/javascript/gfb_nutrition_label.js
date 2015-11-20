@@ -32,7 +32,7 @@ GFBNutritionLabel.prototype.get = function(ingredients){
   var url = "http://nuts.globalfoodbook.net/v1/nutrition/facts?"
   path = url+"ingredients="+ingredients,
   loader = document.getElementById("gfb-nutrition-label-loader"),
-  errorMsg = "An error has occured. Please verify that you ingredient(s) are correctly entered line by line.",
+  errorMsg = "An error has occured. Please verify that your ingredient(s) are correctly entered line by line.",
   _this = this,
   xmlhttp = '',
   response = ''
