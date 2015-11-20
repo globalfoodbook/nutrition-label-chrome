@@ -12,7 +12,8 @@
   "permissions": [
     "tabs",
     "*://*/*",
-    "contextMenus"
+    "contextMenus",
+    "http://nuts.globalfoodbook.net/*"
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "background": {
