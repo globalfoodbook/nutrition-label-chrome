@@ -12,11 +12,6 @@ This extension has been derived from our code used on  [www.globalfoodbook.com](
 
 Our motivation for releasing this extension is based on a forum discussion on the food-cook theme site and we felt that we already had some code that could serve as a basis for others to benefit and possibly improve on.
 
-## Installation
-
-1. Upload /nutrition-facts-label to the /wp-content/extensions directory
-2. Activate the extension through the extensions menu in WordPress
-
 ## Frequently Asked Questions
 
 ### How do I use this Nutrition Label ?
@@ -26,10 +21,8 @@ Press "Generate Label" on the Nutrition Facts Label Generator.
 The nutrition facts are automatically generated for you.
 N:B List the ingredients individually including the quantities.
 
-### How to Include Nutrition Label on Existing Recipes
-To include nutrition label on existing food recipes, simply press the "Go" button for automatic generation of the nutrition label.
-For the unsuccessful updates, make sure that the ingredients are placed line by line and in each line they are without commas or fullstops.
-Then press the "Go" button.
+###How do I Download this Nutrition Label ?
+Click the download button after you have generated the nutrition label
 
 ## Changelog
 
