@@ -53,6 +53,7 @@ GFBNutritionLabel.prototype.get = function(ingredients){
               "showServingUnitQuantity":true,
               "showPolyFat":true,
               "showMonoFat":true,
+              'showCalorieDiet' : true,
               // "showDisclaimer" : true,
               "itemName": "",
               "ingredientList": ingredients
