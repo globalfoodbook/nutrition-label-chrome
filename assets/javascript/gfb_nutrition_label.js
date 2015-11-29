@@ -50,11 +50,11 @@ GFBNutritionLabel.prototype.get = function(ingredients){
       if(xmlhttp.status == 200) {
         try {
           var settings = {
-              "showServingUnitQuantity":true,
-              "showPolyFat":true,
-              "showMonoFat":true,
-              'showCalorieDiet' : true,
-              // "showDisclaimer" : true,
+              "showServingUnitQuantity": true,
+              "showPolyFat": true,
+              "showMonoFat": true,
+              // 'showCalorieDiet': true,
+              // "showDisclaimer": true,
               "itemName": "",
               "ingredientList": ingredients
             };
@@ -71,7 +71,7 @@ GFBNutritionLabel.prototype.get = function(ingredients){
    }
 
   xmlhttp.open("GET",path,true);
-  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  // xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
   xmlhttp.send();
 }
 
