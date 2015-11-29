@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Nutrition Facts Label",
-  "description": "Nutrition fact label generator chrome extension",
+  "description": "Nutrition Facts Label",
   "icons": {
     "16": "assets/images/icon16.png",
     "48": "assets/images/icon48.png",
