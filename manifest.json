@@ -8,7 +8,7 @@
     "128": "assets/images/icon128.png"
   },
   "minimum_chrome_version": "5.0",
-  "version": "0.1",
+  "version": "0.11",
   "permissions": [
     "http://nuts.globalfoodbook.net/*"
   ],
