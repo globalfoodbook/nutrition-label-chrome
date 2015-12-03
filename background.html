@@ -22,10 +22,12 @@
         overflow: hidden;
         padding-left: 12px;
       }
-      #gfb-nutrition-label-notify {
-        color: red;
+      p{
         font-weight: bold;
         margin-left: 12px;
+      }
+      #gfb-nutrition-label-notify {
+        color: red;
       }
       textarea {
         resize: none;
@@ -36,9 +38,10 @@
     <img id="gfb-nutrition-label-loader" src="assets/images/load.gif" style="display:none"/>
     <div class="gfb-nutrition-label-section">
       <p id="gfb-nutrition-label-notify" style="display:none"></p>
+      <p id="gfb-nutrition-label-msg" >The result here are indicative and in some instances may not reflect finer details.</p>
       <div class='section1'>
         <h4>Ingredients:</h4>
-        <textarea id='gfb-nutrition-label-textarea' name='ingredients' rows='12' cols='33' placeholder='1 cup rice&#x0a;1 cup beans&#x0a;1 teaspoon honey&#x0a;50g spinach'></textarea>
+        <textarea id='gfb-nutrition-label-textarea' name='ingredients' rows='12' cols='33' placeholder='broccoli&#x0a;black pepper&#x0a;salt&#x0a;honey&#x0a;spinach'></textarea>
         <p><input id="gfb-nutrition-label-button" type='button' name='Submit' value='Generate Label' style="display: block; width: 140px; background: #4E9CAF; padding: 10px; text-align: center; border-color:transparent; border-radius: 5px; color: white; font-size:13.5px; font-weight: bold; cursor: pointer;"/></p>
       </div>
       <div class='section2'>
