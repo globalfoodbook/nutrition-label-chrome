@@ -28,5 +28,8 @@ Click the download button after you have generated the nutrition label
 
 ## Changelog
 
-### 1.0
+### 0.10
 * Initial Release
+
+### 0.11
+* Minor Patches Release
