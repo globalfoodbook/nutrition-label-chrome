@@ -1,10 +1,3 @@
-# Nutrition Facts Label
-Contributors: (Ikenna Okpala)
-Tags: food, nutrition, nutrition facts, nutrition label, food-cook, recipe extension, shortcode, global food book
-Stable tag: 1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
 ## Description
 This extension provides food bloggers the ability to add nutrition facts label to their recipe post(s) and with nutritive insights.
 
